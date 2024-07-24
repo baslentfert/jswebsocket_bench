@@ -7,7 +7,7 @@ const server = Bun.serve({
       // send back a message
       for (const tws of connections.keys()) {
         if(tws != ws) {
-          ws.send(`${message}`)
+          tws.send(`${message}`)
         }
       }
     },
